@@ -27,10 +27,10 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build
-      - run: find . -maxdepth 4 -name index.html -not -path "./node_modules/*"
+      - run: cp dist/client/index.html dist/client/404.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: dist/client
       - id: deployment
         uses: actions/deploy-pages@v4
