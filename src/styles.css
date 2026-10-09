@@ -148,7 +148,7 @@
 .preview-dialog { max-width: 850px; padding: 24px; background: var(--background); }
 .preview-dialog img { width: 100%; max-height: 65vh; object-fit: contain; }
 @media(min-width:1600px) { .hero-art { object-position: center 53%; } .hero { min-height: 730px; } .hero-content { padding-top: 90px; } }
-@media(max-width:1000px) { .studio-container { width: calc(100% - 64px); } .desktop-nav { gap: 20px; } .hero h1 { font-size: 70px; } .hero-art { object-position: 40% center; } .about-grid { grid-template-columns: 1fr 1.2fr; gap: 35px; } .about-grid figure { grid-column: 2; width: 210px; margin-top: 34px; } .skill-list { justify-content: flex-start; gap: 30px; } }
+@media(max-width:1000px) { .studio-container { width: calc(100% - 64px); } .desktop-nav { gap: 20px; } .hero h1 { font-size: 70px; } .hero-art { object-position: 40% center; } .about-grid { grid-template-columns: 1fr 1.2fr; gap: 35px; } .about-grid figure { grid-column: 2; width: 100%; max-width: 280px; margin-top: 34px; } .skill-list { justify-content: flex-start; gap: 30px; } }
 @media(max-width:640px) {
  .studio-container { width: calc(100% - 40px); }
  .rotating-word { font-size: 36px; }
