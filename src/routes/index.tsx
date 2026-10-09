@@ -61,9 +61,10 @@ const articles = [
 const approach = [
   { image: prototype.url, alt: 'Original Open Studio sketch of a pencil and research notes', title: 'Understand the whole', caption: 'Research lived experiences, make sense of different perspectives, and connect information to find a clear direction.' },
   { image: participatory.url, alt: 'Original Open Studio sketch of people sharing ideas around a table', title: 'Make space for people', caption: 'Go beyond consultation. Bring people into the process and co-design possibilities with those who know the challenge best.' },
-  { image: momentum.url, alt: 'Original Open Studio sketch of visual storyboards and a pencil', title: 'Make it tangible', caption: 'Turn the abstract into something we can see, test and shape — through maps, prototypes and visual stories.' },
+  { image: momentum.url, alt: 'Original Open Studio sketch of visual storyboards and a pencil', title: 'Make it tangible', caption: 'Turn the abstract into something we can see, test and shape, through maps, prototypes and visual stories.' },
 ]
 const nav = [{ label: 'About', id: 'about' }, { label: 'Experience', id: 'experience' }, { label: 'Prompts for Humans', id: 'prompts' }, { label: 'Approach', id: 'approach' }, { label: 'Design', id: 'design' }]
+const services = ['co-design', 'prototyping', 'research and insight', 'digital transformation', 'evaluation']
 function StudioMark() { return <img className="studio-symbol" src={studioMark.url} width={36} height={35} alt="" /> }
 function SectionLabel({ number, children }: { number: string, children: React.ReactNode }) { return <div className="section-label"><span className="section-number">{number}</span>{children}</div> }
 
@@ -115,7 +116,7 @@ function Index() {
         </div>
         <div className="studio-container hero-bottom"><span>Strategy. Policy. Governance. Culture.</span><a href="#about" className="scroll-link">A little more about me <ArrowDown size={13} /></a></div>
       </section>
-      <div className="skill-strip"><ul className="studio-container skill-list">{['Co-design', 'prototyping', 'research and insight', 'digital transformation', 'evaluation'].map(s => <li key={s}>{s}<span className="skill-bullet" aria-hidden="true">•</span></li>)}</ul></div>
+      <div className="skill-strip"><ul className="studio-container skill-list">{services.map((s, i) => <li key={s}>{s}{i < services.length - 1 && <span className="skill-bullet" aria-hidden="true">•</span>}</li>)}</ul></div>
       <section id="about" className="section studio-container">
         <div className="about-grid">
           <div><SectionLabel number="01">About Me</SectionLabel><h2 className="about-title">Hi, I’m Meg.<br />A curious mind.<br />A design partner.</h2></div>
