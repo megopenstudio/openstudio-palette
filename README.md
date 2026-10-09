@@ -22,8 +22,8 @@ Requires Node.js 22+ (or [Bun](https://bun.sh)).
 ```sh
 git clone <this-repository-url>
 cd openstudio
-npm install        # or: bun install
-npm run dev        # or: bun run dev
+bun install
+bun run dev
 ```
 
 Open http://localhost:8080.
@@ -33,7 +33,7 @@ Open http://localhost:8080.
 | Command           | What it does                                                          |
 | ----------------- | --------------------------------------------------------------------- |
 | `npm run dev`     | Start the dev server with hot reload                                  |
-| `npm run build`   | Production build (SSR bundle via Nitro, Cloudflare target by default) |
+| `bun run build`   | Production build (prerendered static site in `dist/client/`) |
 | `npm run preview` | Serve the production build locally                                    |
 | `npm run test`    | Run the test suite (`vitest`)                                         |
 | `npm run lint`    | ESLint over the whole project                                         |
@@ -53,7 +53,7 @@ Editing copy is usually a matter of changing an entry in one of the arrays near 
 
 ## Deploying
 
-`npm run build` prerenders the site to plain static HTML in `dist/client/` — upload that folder's contents to any static host. It already includes `CNAME` (openstudio.ie) and `.nojekyll` for GitHub Pages. The included `deploy.yml` workflow publishes it to GitHub Pages on every push to `main` (set Pages source to "GitHub Actions"). At your domain registrar, point openstudio.ie at GitHub Pages (A records 185.199.108.153, .109.153, .110.153, .111.153).
+`bun run build` prerenders the site to plain static HTML in `dist/client/` — upload that folder's contents to any static host. It already includes `CNAME` (openstudio.ie) and `.nojekyll` for GitHub Pages. The included `deploy.yml` workflow publishes it to GitHub Pages on every push to `main` (set Pages source to "GitHub Actions"). At your domain registrar, point openstudio.ie at GitHub Pages (A records 185.199.108.153, .109.153, .110.153, .111.153).
 
 ## Editing the site with Lovable
 
