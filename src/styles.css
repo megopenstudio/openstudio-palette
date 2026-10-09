@@ -612,6 +612,9 @@
   .skill-list {
     gap: 16px 30px;
   }
+  .skill-list li {
+    gap: 30px;
+  }
 }
 @media (max-width: 640px) {
   .studio-container {
