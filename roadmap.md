@@ -10,3 +10,5 @@
 - [x] Update experience categories and add the farmers’ water markets project.
 - [x] Add two authentic visual design samples, preferably templates and prototypes.
 - [x] Verify headline rotation, experience filtering, portfolio previews and contact links.
+- [x] Show the profile picture at every screen width, lowercase “co-design”, drop the trailing banner bullet, and use a comma under “Make it tangible”.
+- [x] Prepare the project for hosting on GitHub: full README, CI workflow, ignore rules for local artifacts.
