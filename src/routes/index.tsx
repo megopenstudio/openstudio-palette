@@ -12,15 +12,9 @@ import maternity from '@/assets/BainneBeathaReport.png.asset.json'
 import toaster from '@/assets/article-toaster.png.asset.json'
 import pointlessProject from '@/assets/article-project.png.asset.json'
 import friction from '@/assets/article-friction.png.asset.json'
-import handshake from '@/assets/handshake.png.asset.json'
-import flashlight from '@/assets/flashlight.png.asset.json'
-import iterative from '@/assets/iterative.png.asset.json'
 import prototype from '@/assets/prototype.png.asset.json'
 import momentum from '@/assets/momentum.png.asset.json'
 import participatory from '@/assets/participatory.png.asset.json'
-import horizons from '@/assets/horizons.png.asset.json'
-import userresearch from '@/assets/userresearch.png.asset.json'
-import synthesis from '@/assets/synthesis.png.asset.json'
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -58,16 +52,10 @@ const articles = [
   { title: 'I wasted a week on a pointless project, and it was glorious.', excerpt: 'On flow, ownership, and the strange relief of a problem you’re allowed to finish.', date: '5 September 2026', dateTime: '2026-09-05', url: `${publicationUrl}/p/i-wasted-a-week-on-a-pointless-project`, image: pointlessProject.url },
   { title: 'AI won’t dress my kids for me, and I’m glad', excerpt: 'A framework for deciding what to do with our daily frustrations and how they might actually serve us.', date: '12 August 2026', dateTime: '2026-08-12', url: `${publicationUrl}/p/ai-wont-dress-my-kids-for-me-and`, image: friction.url },
 ]
-const sketches = [
-  { image: handshake.url, title: 'Work openly', caption: 'Works collaboratively and openly with stakeholders.' },
-  { image: flashlight.url, title: 'See the big picture', caption: 'Helps make sense of big-picture problem spaces.' },
-  { image: iterative.url, title: 'Frame and reframe', caption: 'Works iteratively, framing and reframing challenges and ideas.' },
-  { image: prototype.url, title: 'Try things out', caption: 'Facilitates prototyping, drafting and sketching to maintain momentum.' },
-  { image: momentum.url, title: 'Make it tangible', caption: 'Develops visuals, maps and storyboards to make the intangible tangible.' },
-  { image: participatory.url, title: 'Design together', caption: 'Goes beyond consultation and facilitates participatory design.' },
-  { image: horizons.url, title: 'Look ahead', caption: 'Is future-orientated, mapping outcomes to close and far horizons.' },
-  { image: userresearch.url, title: 'Understand lived experience', caption: 'Carries out design research with users to gain deep insight into lived experiences.' },
-  { image: synthesis.url, title: 'Connect the dots', caption: 'Synthesises disparate pieces of information to define clear directions.' },
+const approach = [
+  { image: prototype.url, alt: 'Original Open Studio sketch of a pencil and research notes', title: 'Understand the whole', caption: 'Research lived experiences, make sense of different perspectives, and connect information to find a clear direction.' },
+  { image: participatory.url, alt: 'Original Open Studio sketch of people sharing ideas around a table', title: 'Make space for people', caption: 'Go beyond consultation. Bring people into the process and co-design possibilities with those who know the challenge best.' },
+  { image: momentum.url, alt: 'Original Open Studio sketch of visual storyboards and a pencil', title: 'Make it tangible', caption: 'Turn the abstract into something we can see, test and shape — through maps, prototypes and visual stories.' },
 ]
 const nav = [{ label: 'About', id: 'about' }, { label: 'Experience', id: 'experience' }, { label: 'Prompts for Humans', id: 'prompts' }, { label: 'Approach', id: 'approach' }, { label: 'Design', id: 'design' }]
 function StudioMark() { return <svg className="studio-symbol" viewBox="0 0 40 40" fill="none" aria-hidden="true"><g stroke="currentColor" strokeWidth="3.5" strokeLinecap="round"><path d="M20 4v32M6.2 12l27.6 16M6.2 28l27.6-16" /></g></svg> }
@@ -122,8 +110,8 @@ function Index() {
         <div className="article-grid">{articles.map(article => <a key={article.url} className="article-link" href={article.url} target="_blank" rel="noreferrer"><img className="article-image" src={article.image} alt="" width={570} height={570} loading="lazy" /><time className="article-date" dateTime={article.dateTime}>{article.date}</time><h3 className="article-title">{article.title}</h3><p className="article-excerpt">{article.excerpt}</p><span className="article-read">Read on Substack <ArrowUpRight size={15} /></span></a>)}</div>
       </div></section>
       <section id="approach" className="section studio-container">
-        <div className="section-heading"><div><SectionLabel number="04">The approach</SectionLabel><h2 className="section-title">What’s strategic design?</h2></div><p className="section-intro">Strategic design brings the mindset and tools of design to complex, systemic challenges. Open, collaborative and always moving forward.</p></div>
-        <div className="strategy-sketches">{sketches.map(sketch => <figure key={sketch.title} className="strategy-sketch"><img className="strategy-sketch-image" src={sketch.image} alt={`Original Open Studio sketch: ${sketch.title.toLowerCase()}`} width={400} height={300} loading="lazy" /><figcaption><h3>{sketch.title}</h3><p>{sketch.caption}</p></figcaption></figure>)}</div>
+        <div className="section-heading"><div><SectionLabel number="04">The approach</SectionLabel><h2 className="section-title">Big-picture thinking.<br />Hands-on doing.</h2></div><p className="section-intro">Strategic design brings the mindset and tools of design to complex, systemic challenges. Open, collaborative and always moving forward.</p></div>
+        <div className="approach-grid">{approach.map(item => <div key={item.title} className="approach-item"><img className="approach-sketch" src={item.image} alt={item.alt} width={624} height={544} loading="lazy" /><h3>{item.title}</h3><p>{item.caption}</p></div>)}</div>
       </section>
       <section id="design" className="section design-section"><div className="studio-container">
         <div className="section-heading"><div><SectionLabel number="05">Visual design</SectionLabel><h2 className="section-title">Good thinking.<br />Clearly communicated.</h2></div><p className="section-intro">Good strategy deserves good communication. Visual design is woven into my work — and available as a standalone service.</p></div>

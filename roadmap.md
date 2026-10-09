@@ -4,3 +4,5 @@
 - [x] Add Prompts for Humans after Experience with an introduction and three real Substack articles.
 - [x] Add Substack to the footer and present the original strategic-design sketches more clearly.
 - [x] Verify the new sections and links while preserving the colours and fonts.
+- [x] Restore the previous redesign colours and fonts, and its three-part strategic design section with white-background sketches replacing icons.
+- [x] Verify the restored styling and three sketches.
