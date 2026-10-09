@@ -76,13 +76,17 @@
 .status-dot { width: 6px; height: 6px; border-radius: 100%; background: var(--primary); }
 .hero h1 { font-size: 83px; font-weight: 500; line-height: 1.05; margin: 34px 0 23px; max-width: 630px; }
 .hero h1 em { font-style: normal; }
+.rotating-word { display: inline-grid; max-width: 100%; }
+.hero-word { grid-area: 1 / 1; opacity: 0; transform: translateY(8px); transition: opacity .4s ease, transform .4s ease; white-space: nowrap; }
+.hero-word[data-active=true] { opacity: 1; transform: translateY(0); }
 .hero-copy { max-width: 360px; font-size: 16px; line-height: 1.65; margin-bottom: 29px; }
 .hero-cta { height: 45px; padding-inline: 23px; font-size: 12px; }
 .hero-bottom { position: absolute; bottom: 27px; left: 0; right: 0; display: flex; align-items: center; justify-content: space-between; font-size: 10px; font-weight: 500; }
 .scroll-link { display: flex; align-items: center; gap: 10px; }
 .skill-strip { border-bottom: 1px solid var(--border); padding: 26px 0; overflow: hidden; }
-.skill-list { display: flex; justify-content: space-between; align-items: center; gap: 20px; white-space: nowrap; font-size: 12px; font-weight: 500; }
-.skill-list svg { width: 13px; color: var(--coral); }
+.skill-list { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 20px; font-size: 12px; font-weight: 500; list-style: none; padding: 0; margin-block: 0; }
+.skill-list li { display: flex; align-items: center; gap: 20px; white-space: nowrap; }
+.skill-bullet { color: var(--coral); }
 .section { padding-block: 92px; }
 .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0; display: flex; align-items: center; gap: 16px; font-weight: 600; }
 .section-number { color: var(--muted-foreground); }
@@ -147,6 +151,7 @@
 @media(max-width:1000px) { .studio-container { width: calc(100% - 64px); } .desktop-nav { gap: 20px; } .hero h1 { font-size: 70px; } .hero-art { object-position: 40% center; } .about-grid { grid-template-columns: 1fr 1.2fr; gap: 35px; } .about-grid figure { display: none; } .skill-list { justify-content: flex-start; gap: 30px; } }
 @media(max-width:640px) {
  .studio-container { width: calc(100% - 40px); }
+ .rotating-word { font-size: 36px; }
  .site-header { height: 78px; } .wordmark { font-size: 23px; gap: 8px; } .studio-symbol { width: 27px; }
  .desktop-nav { display: none; } .menu-toggle { display: inline-flex; } .mobile-nav { display: flex; flex-direction: column; gap: 15px; padding: 15px 20px 25px; border-top: 1px solid var(--border); }
  .hero { min-height: 700px; } .hero-art { height: 255px; top: auto; bottom: 35px; object-fit: cover; object-position: right; } .hero-content { padding-top: 36px; padding-bottom: 0; }
