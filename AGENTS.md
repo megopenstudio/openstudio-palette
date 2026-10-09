@@ -13,3 +13,4 @@
 - Store downloaded portfolio media as Lovable asset pointers and generated artwork as imported images, keeping authentic work distinct from decorative imagery.
 - Define the studio's visual styles in the global design system and use shared Button variants for interactive controls.
 - Keep publication previews as a curated set of verified canonical article links; do not imply a live feed without implementing one.
+- Rotate hero words client-side within a fixed-size text grid and stop rotation for reduced-motion preferences, avoiding layout shifts and unnecessary motion.

@@ -6,7 +6,7 @@
 - [x] Verify the new sections and links while preserving the colours and fonts.
 - [x] Restore the previous redesign colours and fonts, and its three-part strategic design section with white-background sketches replacing icons.
 - [x] Verify the restored styling and three sketches.
-- [ ] Update the rotating hero headline, original logo, service strip and approved wording.
-- [ ] Update experience categories and add the farmers’ water markets project.
-- [ ] Add two authentic visual design samples, preferably templates and prototypes.
-- [ ] Verify headline rotation, experience filtering, portfolio previews and contact links.
+- [x] Update the rotating hero headline, original logo, service strip and approved wording.
+- [x] Update experience categories and add the farmers’ water markets project.
+- [x] Add two authentic visual design samples, preferably templates and prototypes.
+- [x] Verify headline rotation, experience filtering, portfolio previews and contact links.
