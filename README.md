@@ -33,7 +33,7 @@ Open http://localhost:8080.
 | Command           | What it does                                                          |
 | ----------------- | --------------------------------------------------------------------- |
 | `npm run dev`     | Start the dev server with hot reload                                  |
-| `npm run build`   | Production build (SSR bundle via Nitro, Cloudflare target by default) |
+| `bun run build`   | Production build (prerendered static site in `dist/client/`) |
 | `npm run preview` | Serve the production build locally                                    |
 | `npm run test`    | Run the test suite (`vitest`)                                         |
 | `npm run lint`    | ESLint over the whole project                                         |
