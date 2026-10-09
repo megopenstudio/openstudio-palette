@@ -1,29 +1,65 @@
-# Welcome to your Lovable project
+# Open Studio — Megan Etherton
 
-This project was built with [Lovable](https://lovable.dev).
+The public website for Open Studio, Megan Etherton's strategic design practice: research, co-design and visual communication for strategy, policy, governance and culture.
 
-## Build with Lovable
+Live site: https://openstudio.ie · Writing: https://promptsforhumans.substack.com
 
-Open your project in the [Lovable editor](https://lovable.dev) and keep building.
+## What's on the page
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: connect the project to GitHub and every change made in Lovable is committed straight to your repository.
-- **Full ownership**: this code is yours. Push to your repository and your changes sync back into Lovable, ready for your next prompt.
+One editorial page with anchored sections: About Me, Experience (filterable, with a show-more list), Prompts for Humans (three selected Substack essays), The approach, Visual design (portfolio previews), and Contact.
 
-## Development
+## Tech
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+- [TanStack Start](https://tanstack.com/start) (React 19 + Vite) — single route in `src/routes/index.tsx`, shared shell in `src/routes/__root.tsx`
+- TypeScript, Tailwind CSS v4 (theme tokens live in `src/styles.css`)
+- shadcn/ui primitives in `src/components/ui`, icons from `lucide-react`
+- Portfolio and portrait photography is served from Lovable's asset CDN; the pointers sit in `src/assets/*.asset.json`
+
+## Run it locally
+
+Requires Node.js 22+ (or [Bun](https://bun.sh)).
 
 ```sh
 git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+cd openstudio
+npm install        # or: bun install
+npm run dev        # or: bun run dev
 ```
 
-## Built with
+Open http://localhost:8080.
 
-- TanStack Start
-- TypeScript
-- React
-- Tailwind CSS
+## Scripts
+
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Production build (SSR bundle via Nitro, Cloudflare target by default) |
+| `npm run preview` | Serve the production build locally |
+| `npm run test` | Run the test suite (`vitest`) |
+| `npm run lint` | ESLint over the whole project |
+| `npm run format` | Prettier write |
+
+## Where things live
+
+```text
+src/routes/index.tsx    page sections and the content lists (projects, portfolio, articles, approach)
+src/routes/__root.tsx   document shell, fonts, favicon
+src/styles.css          colour/type tokens and all section styling
+src/assets/            image pointer files (CDN) and generated artwork
+src/test/               vitest tests
+```
+
+Editing copy is usually a matter of changing an entry in one of the arrays near the top of `src/routes/index.tsx`.
+
+## Deploying
+
+`npm run build` produces a portable Nitro bundle in `.output/` that runs on Cloudflare, Node or any container host. Static hosts such as Vercel, Netlify and Cloudflare Pages detect the project automatically; set the build command to `npm run build` and let the host pick the output directory. Add a `CNAME` or custom-domain record pointing at your host once deployed.
+
+## Editing the site with Lovable
+
+This repository is kept in sync with the [Lovable](https://lovable.dev) project it was built in. Connect the repo to Lovable and describe the change you want — edits made there are committed here, and commits pushed here sync back.
+
+## Notes
+
+- Contact details, approved wording and the experience categories are the studio's own; change them deliberately rather than regenerating them.
+- No license is granted by making this repository public: © Megan Etherton t/a Open Studio.
