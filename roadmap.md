@@ -1,0 +1,3 @@
+- [x] Refresh Open Studio’s visual identity and preserve its real content and imagery.
+- [x] Add clear navigation, experience browsing, portfolio previews, and contact links.
+- [x] Verify the finished page and navigation.
