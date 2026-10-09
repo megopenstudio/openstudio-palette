@@ -53,7 +53,7 @@ Editing copy is usually a matter of changing an entry in one of the arrays near 
 
 ## Deploying
 
-`npm run build` prerenders the site to plain static HTML in `dist/client/` — upload that folder's contents to any static host. It already includes `CNAME` (openstudio.ie) and `.nojekyll` for GitHub Pages. The included `deploy.yml` workflow publishes it to GitHub Pages on every push to `main` (set Pages source to "GitHub Actions"). At your domain registrar, point openstudio.ie at GitHub Pages (A records 185.199.108.153, .109.153, .110.153, .111.153).
+`bun run build` prerenders the site to plain static HTML in `dist/client/` — upload that folder's contents to any static host. It already includes `CNAME` (openstudio.ie) and `.nojekyll` for GitHub Pages. The included `deploy.yml` workflow publishes it to GitHub Pages on every push to `main` (set Pages source to "GitHub Actions"). At your domain registrar, point openstudio.ie at GitHub Pages (A records 185.199.108.153, .109.153, .110.153, .111.153).
 
 ## Editing the site with Lovable
 
