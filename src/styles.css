@@ -236,7 +236,7 @@
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 16px 20px;
   font-size: 12px;
@@ -610,7 +610,9 @@
     margin-top: 34px;
   }
   .skill-list {
-    justify-content: flex-start;
+    gap: 16px 30px;
+  }
+  .skill-list li {
     gap: 30px;
   }
 }
@@ -677,6 +679,18 @@
   }
   .skill-strip {
     padding-block: 20px;
+  }
+  .skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px 20px;
+    align-items: start;
+  }
+  .skill-list li {
+    gap: 0;
+  }
+  .skill-bullet {
+    display: none;
   }
   .section {
     padding-block: 58px;

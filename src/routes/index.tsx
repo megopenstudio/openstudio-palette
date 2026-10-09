@@ -15,7 +15,7 @@ import friction from "@/assets/article-friction.png.asset.json";
 import prototype from "@/assets/prototype.png.asset.json";
 import momentum from "@/assets/momentum.png.asset.json";
 import participatory from "@/assets/participatory.png.asset.json";
-import studioMark from "@/assets/studio-mark.svg.asset.json";
+import studioMark from "@/assets/studio-mark-2026.png.asset.json";
 import biosensePrototype from "@/assets/BioSensePrototype.png.asset.json";
 import templates from "@/assets/Templates.png.asset.json";
 
@@ -145,7 +145,7 @@ const services = [
   "evaluation",
 ];
 function StudioMark() {
-  return <img className="studio-symbol" src={studioMark.url} width={36} height={35} alt="" />;
+  return <img className="studio-symbol" src={studioMark.url} width={33} height={32} alt="" />;
 }
 function SectionLabel({ number, children }: { number: string; children: React.ReactNode }) {
   return (
