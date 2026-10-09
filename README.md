@@ -22,8 +22,8 @@ Requires Node.js 22+ (or [Bun](https://bun.sh)).
 ```sh
 git clone <this-repository-url>
 cd openstudio
-npm install        # or: bun install
-npm run dev        # or: bun run dev
+bun install
+bun run dev
 ```
 
 Open http://localhost:8080.
