@@ -12,3 +12,6 @@
 - [x] Verify headline rotation, experience filtering, portfolio previews and contact links.
 - [x] Show the profile picture at every screen width, lowercase “co-design”, drop the trailing banner bullet, and use a comma under “Make it tangible”.
 - [x] Prepare the project for hosting on GitHub: full README, CI workflow, ignore rules for local artifacts.
+- [x] Centre the bullets between the words in the banner and tidy the strip on phones.
+- [x] Replace the blue-and-green logo with the 2026 logo in the header and the tab icon.
+- [x] Verify the new logo and banner spacing at desktop, tablet and phone widths.
