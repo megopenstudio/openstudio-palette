@@ -1,3 +1,6 @@
 - [x] Refresh Open Studio’s visual identity and preserve its real content and imagery.
 - [x] Add clear navigation, experience browsing, portfolio previews, and contact links.
 - [x] Verify the finished page and navigation.
+- [x] Add Prompts for Humans after Experience with an introduction and three real Substack articles.
+- [x] Add Substack to the footer and present the original strategic-design sketches more clearly.
+- [x] Verify the new sections and links while preserving the colours and fonts.

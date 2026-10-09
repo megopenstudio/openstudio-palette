@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import { useState } from 'react'
-import { ArrowUpRight, ArrowDown, ArrowRight, Asterisk, Menu, X, ScanLine, UsersRound, Shapes } from 'lucide-react'
+import { ArrowUpRight, ArrowDown, Asterisk, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog'
 import hero from '@/assets/studio-hero.jpg'
@@ -9,6 +9,18 @@ import butterfly from '@/assets/BioSenseButterfly.png.asset.json'
 import report from '@/assets/IYCFEReport.png.asset.json'
 import identity from '@/assets/DBIdentity.png.asset.json'
 import maternity from '@/assets/BainneBeathaReport.png.asset.json'
+import toaster from '@/assets/article-toaster.png.asset.json'
+import pointlessProject from '@/assets/article-project.png.asset.json'
+import friction from '@/assets/article-friction.png.asset.json'
+import handshake from '@/assets/handshake.png.asset.json'
+import flashlight from '@/assets/flashlight.png.asset.json'
+import iterative from '@/assets/iterative.png.asset.json'
+import prototype from '@/assets/prototype.png.asset.json'
+import momentum from '@/assets/momentum.png.asset.json'
+import participatory from '@/assets/participatory.png.asset.json'
+import horizons from '@/assets/horizons.png.asset.json'
+import userresearch from '@/assets/userresearch.png.asset.json'
+import synthesis from '@/assets/synthesis.png.asset.json'
 
 export const Route = createFileRoute('/')({
   head: () => ({ meta: [
@@ -40,7 +52,24 @@ const portfolio = [
   { title: 'DB visual identity', type: 'Visual identity & brand design', image: identity.url },
   { title: 'Bainne Beatha', type: 'Report design', image: maternity.url },
 ]
-const nav = [{ label: 'About', id: 'about' }, { label: 'Experience', id: 'experience' }, { label: 'Approach', id: 'approach' }, { label: 'Design', id: 'design' }]
+const publicationUrl = 'https://promptsforhumans.substack.com'
+const articles = [
+  { title: 'I don’t collaborate with my toaster—do you?', excerpt: 'What a study tells us about women, the workplace, and how AI rewards what some of us have been told to dampen.', date: '23 September 2026', dateTime: '2026-09-23', url: `${publicationUrl}/p/i-dont-collaborate-with-my-toasterdo`, image: toaster.url },
+  { title: 'I wasted a week on a pointless project, and it was glorious.', excerpt: 'On flow, ownership, and the strange relief of a problem you’re allowed to finish.', date: '5 September 2026', dateTime: '2026-09-05', url: `${publicationUrl}/p/i-wasted-a-week-on-a-pointless-project`, image: pointlessProject.url },
+  { title: 'AI won’t dress my kids for me, and I’m glad', excerpt: 'A framework for deciding what to do with our daily frustrations and how they might actually serve us.', date: '12 August 2026', dateTime: '2026-08-12', url: `${publicationUrl}/p/ai-wont-dress-my-kids-for-me-and`, image: friction.url },
+]
+const sketches = [
+  { image: handshake.url, title: 'Work openly', caption: 'Works collaboratively and openly with stakeholders.' },
+  { image: flashlight.url, title: 'See the big picture', caption: 'Helps make sense of big-picture problem spaces.' },
+  { image: iterative.url, title: 'Frame and reframe', caption: 'Works iteratively, framing and reframing challenges and ideas.' },
+  { image: prototype.url, title: 'Try things out', caption: 'Facilitates prototyping, drafting and sketching to maintain momentum.' },
+  { image: momentum.url, title: 'Make it tangible', caption: 'Develops visuals, maps and storyboards to make the intangible tangible.' },
+  { image: participatory.url, title: 'Design together', caption: 'Goes beyond consultation and facilitates participatory design.' },
+  { image: horizons.url, title: 'Look ahead', caption: 'Is future-orientated, mapping outcomes to close and far horizons.' },
+  { image: userresearch.url, title: 'Understand lived experience', caption: 'Carries out design research with users to gain deep insight into lived experiences.' },
+  { image: synthesis.url, title: 'Connect the dots', caption: 'Synthesises disparate pieces of information to define clear directions.' },
+]
+const nav = [{ label: 'About', id: 'about' }, { label: 'Experience', id: 'experience' }, { label: 'Prompts for Humans', id: 'prompts' }, { label: 'Approach', id: 'approach' }, { label: 'Design', id: 'design' }]
 function StudioMark() { return <svg className="studio-symbol" viewBox="0 0 40 40" fill="none" aria-hidden="true"><g stroke="currentColor" strokeWidth="3.5" strokeLinecap="round"><path d="M20 4v32M6.2 12l27.6 16M6.2 28l27.6-16" /></g></svg> }
 function SectionLabel({ number, children }: { number: string, children: React.ReactNode }) { return <div className="section-label"><span className="section-number">{number}</span>{children}</div> }
 
@@ -88,23 +117,23 @@ function Index() {
         <div>{visible.map(p => <div className="project-row" key={p.title}><span className="project-index">{String(projects.indexOf(p) + 1).padStart(2, '0')}</span><h3 className="project-name">{p.title}</h3><span className="project-category">{p.category}</span><ArrowUpRight size={17} aria-hidden="true" /></div>)}</div>
         {filtered.length > 5 && <Button variant="studioOutline" className="filter-button mt-7" onClick={() => setExpanded(!expanded)}>{expanded ? 'Show less' : 'More experience'}<ArrowDown className={expanded ? 'rotate-180' : ''} /></Button>}
       </div></section>
+      <section id="prompts" className="section prompts-section" aria-labelledby="prompts-heading"><div className="studio-container">
+        <div className="section-heading prompts-heading"><div><SectionLabel number="03">Writing & reflections</SectionLabel><h2 id="prompts-heading" className="section-title">Prompts for Humans</h2></div><div className="prompts-intro"><p>Ideas for humans to explore friction, discomfort, depth, texture, creativity, collaboration and richness in the age of AI.</p><Button variant="studioOutline" asChild><a href={`${publicationUrl}/about`} target="_blank" rel="noreferrer">Explore my Substack <ArrowUpRight /></a></Button></div></div>
+        <div className="article-grid">{articles.map(article => <a key={article.url} className="article-link" href={article.url} target="_blank" rel="noreferrer"><img className="article-image" src={article.image} alt="" width={570} height={570} loading="lazy" /><time className="article-date" dateTime={article.dateTime}>{article.date}</time><h3 className="article-title">{article.title}</h3><p className="article-excerpt">{article.excerpt}</p><span className="article-read">Read on Substack <ArrowUpRight size={15} /></span></a>)}</div>
+      </div></section>
       <section id="approach" className="section studio-container">
-        <div className="section-heading"><div><SectionLabel number="03">The approach</SectionLabel><h2 className="section-title">Big-picture thinking.<br />Hands-on doing.</h2></div><p className="section-intro">Strategic design brings the mindset and tools of design to complex, systemic challenges. Open, collaborative and always moving forward.</p></div>
-        <div className="approach-grid">
-          <div className="approach-item"><ScanLine className="approach-icon" /><h3>Understand the whole</h3><p>Research lived experiences, make sense of different perspectives, and connect information to find a clear direction.</p></div>
-          <div className="approach-item"><UsersRound className="approach-icon" /><h3>Make space for people</h3><p>Go beyond consultation. Bring people into the process and co-design possibilities with those who know the challenge best.</p></div>
-          <div className="approach-item"><Shapes className="approach-icon" /><h3>Make it tangible</h3><p>Turn the abstract into something we can see, test and shape — through maps, prototypes and visual stories.</p></div>
-        </div>
+        <div className="section-heading"><div><SectionLabel number="04">The approach</SectionLabel><h2 className="section-title">What’s strategic design?</h2></div><p className="section-intro">Strategic design brings the mindset and tools of design to complex, systemic challenges. Open, collaborative and always moving forward.</p></div>
+        <div className="strategy-sketches">{sketches.map(sketch => <figure key={sketch.title} className="strategy-sketch"><img className="strategy-sketch-image" src={sketch.image} alt={`Original Open Studio sketch: ${sketch.title.toLowerCase()}`} width={400} height={300} loading="lazy" /><figcaption><h3>{sketch.title}</h3><p>{sketch.caption}</p></figcaption></figure>)}</div>
       </section>
       <section id="design" className="section design-section"><div className="studio-container">
-        <div className="section-heading"><div><SectionLabel number="04">Visual design</SectionLabel><h2 className="section-title">Good thinking.<br />Clearly communicated.</h2></div><p className="section-intro">Good strategy deserves good communication. Visual design is woven into my work — and available as a standalone service.</p></div>
+        <div className="section-heading"><div><SectionLabel number="05">Visual design</SectionLabel><h2 className="section-title">Good thinking.<br />Clearly communicated.</h2></div><p className="section-intro">Good strategy deserves good communication. Visual design is woven into my work — and available as a standalone service.</p></div>
         <div className="portfolio-grid">{portfolio.map(p => <Button key={p.title} variant="ghost" className="portfolio-button" onClick={() => setSelected(p)} aria-label={`View ${p.title}`}><div className="portfolio-image-wrap"><img className="portfolio-image" src={p.image} alt={`${p.title} design work by Open Studio`} width={1320} height={990} loading="lazy" /></div><div className="portfolio-caption"><span>{p.title}<span className="portfolio-type">{p.type}</span></span><ArrowUpRight size={19} /></div></Button>)}</div>
       </div></section>
       <section id="contact" className="contact-section"><div className="studio-container">
-        <SectionLabel number="05">Open for collaboration</SectionLabel><h2 className="contact-heading">Something on your mind?<br />Let’s make a start.</h2><div className="contact-bottom"><a className="email-link" href="mailto:meg.openstudio@gmail.com">meg.openstudio@gmail.com <ArrowUpRight size={23} /></a><p className="contact-copy">A project, a challenge, or a possibility.<br />I’d love to hear what you’re thinking.</p></div>
+        <SectionLabel number="06">Open for collaboration</SectionLabel><h2 className="contact-heading">Something on your mind?<br />Let’s make a start.</h2><div className="contact-bottom"><a className="email-link" href="mailto:meg.openstudio@gmail.com">meg.openstudio@gmail.com <ArrowUpRight size={23} /></a><p className="contact-copy">A project, a challenge, or a possibility.<br />I’d love to hear what you’re thinking.</p></div>
       </div></section>
     </main>
-    <footer className="site-footer studio-container"><span>© {new Date().getUTCFullYear()} Megan Etherton t/a Open Studio</span><div className="footer-links"><a href="https://www.linkedin.com/in/megan-etherton" target="_blank" rel="noreferrer" className="flex items-center gap-1">LinkedIn <ArrowUpRight size={12} /></a><a href="#top" className="flex items-center gap-1">Back to top <ArrowUpRight size={12} /></a></div></footer>
+    <footer className="site-footer studio-container"><span>© {new Date().getUTCFullYear()} Megan Etherton t/a Open Studio</span><div className="footer-links"><a href={publicationUrl} target="_blank" rel="noreferrer" className="flex items-center gap-1">Substack <ArrowUpRight size={12} /></a><a href="https://www.linkedin.com/in/megan-etherton" target="_blank" rel="noreferrer" className="flex items-center gap-1">LinkedIn <ArrowUpRight size={12} /></a><a href="#top" className="flex items-center gap-1">Back to top <ArrowUpRight size={12} /></a></div></footer>
     <Dialog open={selected !== null} onOpenChange={open => { if (!open) setSelected(null) }}><DialogContent className="preview-dialog"><DialogTitle>{selected?.title}</DialogTitle><DialogDescription>{selected?.type}</DialogDescription>{selected && <img src={selected.image} alt={`${selected.title} design work`} width={1320} height={990} />}</DialogContent></Dialog>
   </>
 }
