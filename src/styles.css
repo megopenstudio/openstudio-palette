@@ -236,7 +236,7 @@
 .skill-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 16px 20px;
   font-size: 12px;
@@ -610,8 +610,7 @@
     margin-top: 34px;
   }
   .skill-list {
-    justify-content: flex-start;
-    gap: 30px;
+    gap: 16px 30px;
   }
 }
 @media (max-width: 640px) {
