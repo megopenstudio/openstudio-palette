@@ -13,9 +13,9 @@ const maternity = asset("BainneBeathaReport.png");
 const toaster = asset("article-toaster.png");
 const pointlessProject = asset("article-project.png");
 const friction = asset("article-friction.png");
-const prototype = asset("prototype.png");
-const momentum = asset("momentum.png");
-const participatory = asset("participatory.png");
+const horizons = asset("horizons.png");
+const userResearch = asset("userresearch.png");
+const synthesis = asset("synthesis.png");
 const studioMark = asset("studio-mark-2026.png");
 const biosensePrototype = asset("BioSensePrototype.png");
 const templates = asset("Templates.png");
@@ -110,22 +110,22 @@ const articles = [
 ];
 const approach = [
   {
-    image: prototype.url,
-    alt: "Original Open Studio sketch of a pencil and research notes",
+    image: horizons.url,
+    alt: "Original Open Studio sketch of a cone reaching toward the horizon",
     title: "Understand the whole",
     caption:
       "Research lived experiences, make sense of different perspectives, and connect information to find a clear direction.",
   },
   {
-    image: participatory.url,
-    alt: "Original Open Studio sketch of people sharing ideas around a table",
+    image: userResearch.url,
+    alt: "Original Open Studio sketch of a group of people, some standing together on common ground",
     title: "Make space for people",
     caption:
       "Go beyond consultation. Bring people into the process and co-design possibilities with those who know the challenge best.",
   },
   {
-    image: momentum.url,
-    alt: "Original Open Studio sketch of visual storyboards and a pencil",
+    image: synthesis.url,
+    alt: "Original Open Studio sketch of a hand pointing at scattered ideas on a board",
     title: "Make it tangible",
     caption:
       "Turn the abstract into something we can see, test and shape, through maps, prototypes and visual stories.",
