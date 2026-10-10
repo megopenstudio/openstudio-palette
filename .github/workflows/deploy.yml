@@ -29,6 +29,12 @@ jobs:
       - run: bun run build
       - name: Verify prerendered pages exist
         run: |
+          # Outside Lovable the static files can land in dist/public or .output/public.
+          if [ ! -f dist/client/index.html ]; then
+            for d in dist/public .output/public; do
+              if [ -f "$d/index.html" ]; then rm -rf dist/client; mkdir -p dist; cp -r "$d" dist/client; break; fi
+            done
+          fi
           test -f dist/client/index.html || {
             echo "::error::dist/client/index.html was not generated"
             ls -R dist || true
