@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
-import studioMark from "../assets/studio-mark-2026.png.asset.json";
+const studioMark = { url: "/assets/studio-mark-2026.png" };
 
 function NotFoundComponent() {
   return (

@@ -4,20 +4,21 @@ import { ArrowUpRight, ArrowDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import hero from "@/assets/studio-hero.jpg";
-import portrait from "@/assets/profilepicture.png.asset.json";
-import butterfly from "@/assets/BioSenseButterfly.png.asset.json";
-import report from "@/assets/IYCFEReport.png.asset.json";
-import identity from "@/assets/DBIdentity.png.asset.json";
-import maternity from "@/assets/BainneBeathaReport.png.asset.json";
-import toaster from "@/assets/article-toaster.png.asset.json";
-import pointlessProject from "@/assets/article-project.png.asset.json";
-import friction from "@/assets/article-friction.png.asset.json";
-import prototype from "@/assets/prototype.png.asset.json";
-import momentum from "@/assets/momentum.png.asset.json";
-import participatory from "@/assets/participatory.png.asset.json";
-import studioMark from "@/assets/studio-mark-2026.png.asset.json";
-import biosensePrototype from "@/assets/BioSensePrototype.png.asset.json";
-import templates from "@/assets/Templates.png.asset.json";
+const asset = (name: string) => ({ url: `/assets/${name}` });
+const portrait = asset("profilepicture.png");
+const butterfly = asset("BioSenseButterfly.png");
+const report = asset("IYCFEReport.png");
+const identity = asset("DBIdentity.png");
+const maternity = asset("BainneBeathaReport.png");
+const toaster = asset("article-toaster.png");
+const pointlessProject = asset("article-project.png");
+const friction = asset("article-friction.png");
+const prototype = asset("prototype.png");
+const momentum = asset("momentum.png");
+const participatory = asset("participatory.png");
+const studioMark = asset("studio-mark-2026.png");
+const biosensePrototype = asset("BioSensePrototype.png");
+const templates = asset("Templates.png");
 
 export const Route = createFileRoute("/")({
   head: () => ({

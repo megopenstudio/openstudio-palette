@@ -13,7 +13,7 @@ One editorial page with anchored sections: About Me, Experience (filterable, wit
 - [TanStack Start](https://tanstack.com/start) (React 19 + Vite) — single route in `src/routes/index.tsx`, shared shell in `src/routes/__root.tsx`
 - TypeScript, Tailwind CSS v4 (theme tokens live in `src/styles.css`)
 - shadcn/ui primitives in `src/components/ui`, icons from `lucide-react`
-- Portfolio and portrait photography is served from Lovable's asset CDN; the pointers sit in `src/assets/*.asset.json`
+- Portfolio and portrait photography lives in `public/assets/` and is copied into the build as-is
 
 ## Run it locally
 
@@ -45,7 +45,8 @@ Open http://localhost:8080.
 src/routes/index.tsx    page sections and the content lists (projects, portfolio, articles, approach)
 src/routes/__root.tsx   document shell, fonts, favicon
 src/styles.css          colour/type tokens and all section styling
-src/assets/            image pointer files (CDN) and generated artwork
+public/assets/         portfolio images, portraits and the logo
+src/assets/            generated artwork (imported by the build)
 src/test/               vitest tests
 ```
 
