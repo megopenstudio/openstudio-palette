@@ -9,4 +9,9 @@ export default defineConfig({
     pages: [{ path: "/" }],
     prerender: { enabled: true, autoStaticPathsDiscovery: false },
   },
+  // Pin output dirs so CI (outside the Lovable sandbox) also writes dist/client.
+  nitro: {
+    preset: "cloudflare-module",
+    output: { dir: "dist", serverDir: "dist/server", publicDir: "dist/client" },
+  },
 });
