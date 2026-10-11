@@ -15,3 +15,4 @@
 - [x] Centre the bullets between the words in the banner and tidy the strip on phones.
 - [x] Replace the blue-and-green logo with the 2026 logo in the header and the tab icon.
 - [x] Verify the new logo and banner spacing at desktop, tablet and phone widths.
+- [ ] Replace the hero ribbon with six layered uploaded cards and gentle rotation; verify rendering and reduced motion.
