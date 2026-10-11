@@ -144,7 +144,7 @@
 .hero {
   position: relative;
   background: var(--blush);
-  min-height: 650px;
+  min-height: 700px;
   overflow: hidden;
 }
 .hero-cards {
@@ -190,7 +190,7 @@
 .hero-content {
   position: relative;
   padding-top: 62px;
-  padding-bottom: 105px;
+  padding-bottom: 65px;
 }
 .eyebrow {
   text-transform: uppercase;
