@@ -16,3 +16,4 @@
 - [x] Replace the blue-and-green logo with the 2026 logo in the header and the tab icon.
 - [x] Verify the new logo and banner spacing at desktop, tablet and phone widths.
 - [x] Replace the hero ribbon with six layered uploaded cards and gentle rotation; verify rendering and reduced motion.
+- [x] Swap the two matrix cards' positions and make the card drift clearly visible.
