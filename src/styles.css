@@ -169,19 +169,24 @@
   aspect-ratio: 1;
   filter: drop-shadow(3px 8px 5px var(--card-art-shadow));
   transform: rotate(var(--card-angle));
-  animation: card-turn 12s ease-in-out infinite alternate;
-  animation-delay: var(--card-delay);
+  animation: card-drift var(--card-speed, 8s) ease-in-out var(--card-delay, 0s) infinite alternate;
   user-select: none;
 }
-.hero-card-02 { left: 10%; top: 0; --card-angle: -17deg; --card-delay: -2s; }
-.hero-card-03 { left: 50%; top: 8%; --card-angle: 13deg; --card-delay: -7s; }
-.hero-card-04 { left: 29%; top: 26%; --card-angle: -8deg; --card-delay: -4s; }
-.hero-card-05 { left: 0; top: 48%; --card-angle: -22deg; --card-delay: -9s; }
-.hero-card-06 { left: 57%; top: 50%; --card-angle: 16deg; --card-delay: -5s; }
-.hero-card-07 { left: 29%; top: 65%; --card-angle: 9deg; --card-delay: -11s; }
-@keyframes card-turn {
-  from { transform: rotate(var(--card-angle)); }
-  to { transform: rotate(calc(var(--card-angle) + 4deg)); }
+.hero-card-02 { left: 10%; top: 0; --card-angle: -17deg; --card-delay: -1.5s; --card-speed: 7s; --card-turn: 8deg; --card-dx: -14px; --card-dy: 16px; }
+.hero-card-03 { left: 50%; top: 8%; --card-angle: 13deg; --card-delay: -4s; --card-speed: 9s; --card-turn: -7deg; --card-dx: 16px; --card-dy: -14px; }
+.hero-card-04 { left: 29%; top: 26%; --card-angle: -8deg; --card-delay: -6s; --card-speed: 10s; --card-turn: 5deg; --card-dx: 8px; --card-dy: 10px; }
+.hero-card-05 { left: 57%; top: 50%; --card-angle: 16deg; --card-delay: -2.5s; --card-speed: 8s; --card-turn: -9deg; --card-dx: 18px; --card-dy: -10px; }
+.hero-card-06 { left: 0; top: 48%; --card-angle: -22deg; --card-delay: -5s; --card-speed: 8.5s; --card-turn: 9deg; --card-dx: -16px; --card-dy: -12px; }
+.hero-card-07 { left: 29%; top: 65%; --card-angle: 9deg; --card-delay: -7s; --card-speed: 7.5s; --card-turn: -6deg; --card-dx: -8px; --card-dy: 18px; }
+@keyframes card-drift {
+  from {
+    transform: rotate(var(--card-angle)) translate(0, 0);
+    filter: drop-shadow(3px 8px 5px var(--card-art-shadow));
+  }
+  to {
+    transform: rotate(calc(var(--card-angle) + var(--card-turn))) translate(var(--card-dx), var(--card-dy));
+    filter: drop-shadow(5px 11px 7px var(--card-art-shadow));
+  }
 }
 .hero-content {
   position: relative;
