@@ -17,3 +17,5 @@
 - [x] Verify the new logo and banner spacing at desktop, tablet and phone widths.
 - [x] Replace the hero ribbon with six layered uploaded cards and gentle rotation; verify rendering and reduced motion.
 - [x] Swap the two matrix cards' positions and make the card drift clearly visible.
+- [x] Move experience 01 into the Public services category.
+- [x] Keep the hero cards as exact circles and give the deck clear space above the bottom strip.

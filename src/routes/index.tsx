@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
 });
 
 const projects = [
-  { title: "Helping employers support workplace wellbeing", category: "Health and Wellbeing" },
+  { title: "Helping employers support workplace wellbeing", category: "Public services" },
   { title: "Rapid research to uplift a BCorp’s B2B experience", category: "Organisations" },
   { title: "Creating a unified customer experience strategy", category: "Public services" },
   { title: "Co-designing interventions to improve recruiting", category: "Organisations" },
