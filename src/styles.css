@@ -176,8 +176,8 @@
 .hero-card-02 { left: 10%; top: 0; --card-angle: -17deg; --card-delay: -2s; }
 .hero-card-03 { left: 50%; top: 8%; --card-angle: 13deg; --card-delay: -7s; }
 .hero-card-04 { left: 29%; top: 26%; --card-angle: -8deg; --card-delay: -4s; }
-.hero-card-05 { left: 0; top: 48%; --card-angle: -22deg; --card-delay: -9s; }
-.hero-card-06 { left: 57%; top: 50%; --card-angle: 16deg; --card-delay: -5s; }
+.hero-card-05 { left: 57%; top: 50%; --card-angle: 16deg; --card-delay: -5s; }
+.hero-card-06 { left: 0; top: 48%; --card-angle: -22deg; --card-delay: -9s; }
 .hero-card-07 { left: 29%; top: 65%; --card-angle: 9deg; --card-delay: -11s; }
 @keyframes card-turn {
   from { transform: rotate(var(--card-angle)); }
