@@ -149,7 +149,7 @@
 }
 .hero-cards {
   position: absolute;
-  width: min(43%, 610px);
+  width: min(41%, 610px);
   aspect-ratio: 1;
   right: max(3%, calc((100% - 1320px) / 2));
   top: 40px;
