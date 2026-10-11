@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.7 168.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #732043;
+      }
+
+      .cls-2 {
+        font-family: PublicSansRoman-ExtraBold, 'Public Sans';
+        font-size: 9px;
+        font-variation-settings: 'wght' 800;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #221f20;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 5.95px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-family: PublicSansRoman-Regular, 'Public Sans';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-7 {
+        fill: #ebafc3;
+      }
+
+      .cls-4 {
+        font-size: 6px;
+      }
+
+      .cls-5 {
+        font-size: 5px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-6" cx="84.35" cy="84.35" r="84.35"/>
+  <text class="cls-2" transform="translate(30.9 44.35)"><tspan x="0" y="0">EFFORT VALUE MATRIX</tspan></text>
+  <text class="cls-4" transform="translate(40.99 84.64)"><tspan x="0" y="0">Use the matrix on some of your </tspan><tspan x="-6.06" y="7.2">tasks. What would you move, and in </tspan><tspan x="-3.07" y="14.4">what direction? Where would you </tspan><tspan x="-7.31" y="21.6">like the majority of your tasks to sit?</tspan></text>
+  <text class="cls-3" transform="translate(74.57 56.17)"><tspan x="0" y="0">02 / 03</tspan></text>
+  <text class="cls-5" transform="translate(60.3 154.65) rotate(17.72)"><tspan x="0" y="0">p</tspan></text>
+  <text class="cls-5" transform="translate(63.24 155.58) rotate(15.72)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-5" transform="translate(65.2 156.14) rotate(13.8)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-5" transform="translate(68.11 156.87) rotate(10.89)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-5" transform="translate(72.52 157.69) rotate(7.94)"><tspan x="0" y="0">p</tspan></text>
+  <text class="cls-5" transform="translate(75.59 158.11) rotate(5.96)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-5" transform="translate(77.61 158.32) rotate(4.17)"><tspan x="0" y="0">s</tspan></text>
+  <text class="cls-5" transform="translate(80.22 158.5) rotate(2.68)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-5" transform="translate(81.5 158.57) rotate(1.41)"><tspan x="0" y="0">f</tspan></text>
+  <text class="cls-5" transform="translate(83.6 158.63) rotate(-.93)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-5" transform="translate(86.51 158.59) rotate(-2.38)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-5" transform="translate(88.54 158.5) rotate(-3.65)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-5" transform="translate(89.83 158.43) rotate(-5.28)"><tspan x="0" y="0">h</tspan></text>
+  <text class="cls-5" transform="translate(92.83 158.15) rotate(-7.6)"><tspan x="0" y="0">u</tspan></text>
+  <text class="cls-5" transform="translate(95.88 157.76) rotate(-10.53)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-5" transform="translate(100.27 156.92) rotate(-13.4)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-5" transform="translate(103.07 156.25) rotate(-15.68)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-5" transform="translate(105.96 155.43) rotate(-17.88)"><tspan x="0" y="0">s</tspan></text>
+  <g>
+    <path class="cls-7" d="M84.92,138.15c2.48,0,4.49,2.01,4.49,4.49s-2.01,4.49-4.49,4.49-4.49-2.01-4.49-4.49c0-2.48,2.01-4.49,4.49-4.49ZM84.96,140.42c-1.25,0-2.27,1.02-2.27,2.27s1.01,2.27,2.27,2.27,2.27-1.02,2.27-2.27-1.01-2.27-2.27-2.27Z"/>
+    <path class="cls-1" d="M83.78,137.3c2.48,0,4.49,2.01,4.49,4.49s-2.01,4.49-4.49,4.49-4.49-2.01-4.49-4.49c0-2.48,2.01-4.49,4.49-4.49ZM83.83,139.57c-1.25,0-2.27,1.02-2.27,2.27s1.01,2.27,2.27,2.27,2.27-1.02,2.27-2.27-1.01-2.27-2.27-2.27Z"/>
+  </g>
+</svg>
