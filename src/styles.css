@@ -190,7 +190,7 @@
 .hero-content {
   position: relative;
   padding-top: 62px;
-  padding-bottom: 65px;
+  padding-bottom: 105px;
 }
 .eyebrow {
   text-transform: uppercase;
@@ -625,7 +625,7 @@
     width: min(520px, 86%);
     top: auto;
     right: auto;
-    margin: 0 auto 80px;
+    margin: 0 auto 120px;
   }
   .hero-bottom { order: 2; }
 }
