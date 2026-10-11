@@ -17,3 +17,4 @@
 - Keep publication previews as a curated set of verified canonical article links; do not imply a live feed without implementing one.
 - Rotate hero words client-side within a fixed-size text grid and stop rotation for reduced-motion preferences, avoiding layout shifts and unnecessary motion.
 - Build as a fully static site: only "/" is prerendered and the upload folder is dist/client, because the site is hosted on GitHub Pages.
+- Render the hero card artwork as static SVG images with CSS-only rotation and reduced-motion support, so it remains prerenderable and works on GitHub Pages without video services.

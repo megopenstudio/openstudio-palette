@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 168.7 168.7">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #732043;
+      }
+
+      .cls-2 {
+        font-family: PublicSansRoman-ExtraBold, 'Public Sans';
+        font-size: 9px;
+        font-variation-settings: 'wght' 800;
+        font-weight: 700;
+      }
+
+      .cls-2, .cls-3, .cls-4, .cls-5 {
+        fill: #221f20;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-size: 5.95px;
+      }
+
+      .cls-3, .cls-4, .cls-5 {
+        font-family: PublicSansRoman-Regular, 'Public Sans';
+        font-variation-settings: 'wght' 400;
+      }
+
+      .cls-7 {
+        fill: #ebafc3;
+      }
+
+      .cls-4 {
+        font-size: 6px;
+      }
+
+      .cls-5 {
+        font-size: 5px;
+      }
+    </style>
+  </defs>
+  <circle class="cls-6" cx="84.35" cy="84.35" r="84.35"/>
+  <text class="cls-2" transform="translate(40.47 44.35)"><tspan x="0" y="0">THE BRIEF BURDEN</tspan></text>
+  <text class="cls-4" transform="translate(40.79 73.84)"><tspan x="0" y="0">Name an idea for a project (one </tspan><tspan x="-3.25" y="7.2">thing you could fully own, start to </tspan><tspan x="-7.57" y="14.4">finish, no clients), challenge yourself </tspan><tspan x="-2.08" y="21.6">to write the brief. This could be a </tspan><tspan x="1.12" y="28.8">few bullet points, or a detailed </tspan><tspan x="-5.53" y="36">document. Do you feel more or less </tspan><tspan x="16.44" y="43.2">likely to work on it?</tspan></text>
+  <text class="cls-3" transform="translate(75.14 56.17)"><tspan x="0" y="0">04 / 01</tspan></text>
+  <text class="cls-5" transform="translate(60.3 153.96) rotate(17.72)"><tspan x="0" y="0">p</tspan></text>
+  <text class="cls-5" transform="translate(63.24 154.89) rotate(15.72)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-5" transform="translate(65.2 155.45) rotate(13.8)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-5" transform="translate(68.11 156.18) rotate(10.89)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-5" transform="translate(72.52 157) rotate(7.94)"><tspan x="0" y="0">p</tspan></text>
+  <text class="cls-5" transform="translate(75.59 157.42) rotate(5.96)"><tspan x="0" y="0">t</tspan></text>
+  <text class="cls-5" transform="translate(77.61 157.64) rotate(4.17)"><tspan x="0" y="0">s</tspan></text>
+  <text class="cls-5" transform="translate(80.22 157.82) rotate(2.68)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-5" transform="translate(81.5 157.88) rotate(1.41)"><tspan x="0" y="0">f</tspan></text>
+  <text class="cls-5" transform="translate(83.6 157.95) rotate(-.93)"><tspan x="0" y="0">o</tspan></text>
+  <text class="cls-5" transform="translate(86.51 157.9) rotate(-2.38)"><tspan x="0" y="0">r</tspan></text>
+  <text class="cls-5" transform="translate(88.54 157.81) rotate(-3.65)"><tspan x="0" y="0"> </tspan></text>
+  <text class="cls-5" transform="translate(89.83 157.74) rotate(-5.28)"><tspan x="0" y="0">h</tspan></text>
+  <text class="cls-5" transform="translate(92.83 157.46) rotate(-7.6)"><tspan x="0" y="0">u</tspan></text>
+  <text class="cls-5" transform="translate(95.88 157.07) rotate(-10.53)"><tspan x="0" y="0">m</tspan></text>
+  <text class="cls-5" transform="translate(100.27 156.23) rotate(-13.4)"><tspan x="0" y="0">a</tspan></text>
+  <text class="cls-5" transform="translate(103.07 155.56) rotate(-15.68)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-5" transform="translate(105.96 154.74) rotate(-17.88)"><tspan x="0" y="0">s</tspan></text>
+  <g>
+    <path class="cls-7" d="M84.92,136.39c2.48,0,4.49,2.01,4.49,4.49s-2.01,4.49-4.49,4.49-4.49-2.01-4.49-4.49c0-2.48,2.01-4.49,4.49-4.49ZM84.96,138.66c-1.25,0-2.27,1.02-2.27,2.27s1.01,2.27,2.27,2.27,2.27-1.02,2.27-2.27-1.01-2.27-2.27-2.27Z"/>
+    <path class="cls-1" d="M83.78,135.54c2.48,0,4.49,2.01,4.49,4.49s-2.01,4.49-4.49,4.49-4.49-2.01-4.49-4.49c0-2.48,2.01-4.49,4.49-4.49ZM83.83,137.81c-1.25,0-2.27,1.02-2.27,2.27s1.01,2.27,2.27,2.27,2.27-1.02,2.27-2.27-1.01-2.27-2.27-2.27Z"/>
+  </g>
+</svg>

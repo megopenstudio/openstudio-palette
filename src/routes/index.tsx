@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ArrowUpRight, ArrowDown, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from "@/components/ui/dialog";
-import hero from "@/assets/studio-hero.jpg";
+import { HeroCards } from "@/components/hero-cards";
 const asset = (name: string) => ({ url: `/assets/${name}` });
 const portrait = asset("profilepicture.png");
 const butterfly = asset("BioSenseButterfly.png");
@@ -240,14 +240,7 @@ function Index() {
       </header>
       <main>
         <section className="hero" aria-labelledby="hero-heading">
-          <img
-            className="hero-art"
-            src={hero}
-            alt="A sculptural burgundy paper ribbon forming an open, interconnected loop"
-            width={1536}
-            height={1024}
-            fetchPriority="high"
-          />
+          <HeroCards />
           <div className="studio-container hero-content">
             <div className="eyebrow">
               <span className="status-dot" />
