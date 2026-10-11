@@ -153,14 +153,13 @@
   aspect-ratio: 1;
   right: max(3%, calc((100% - 1320px) / 2));
   top: 40px;
-  perspective: 1200px;
   pointer-events: none;
 }
 .hero-card-surface {
   position: relative;
   width: 100%;
   height: 100%;
-  transform: rotateX(14deg) rotateZ(-3deg);
+  transform: rotate(-3deg);
 }
 .hero-card {
   position: absolute;
