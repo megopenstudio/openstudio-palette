@@ -121,7 +121,7 @@ function useSubstackArticles(): Article[] {
   const [articles, setArticles] = useState<Article[]>(fallbackArticles);
   useEffect(() => {
     let cancelled = false;
-    fetch(`${publicationUrl}/feed`)
+    fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`${publicationUrl}/feed`)}`)
       .then((res) => {
         if (!res.ok) throw new Error("feed unavailable");
         return res.text();
