@@ -121,11 +121,26 @@ function useSubstackArticles(): Article[] {
   const [articles, setArticles] = useState<Article[]>(fallbackArticles);
   useEffect(() => {
     let cancelled = false;
-    fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`${publicationUrl}/feed`)}`)
-      .then((res) => {
-        if (!res.ok) throw new Error("feed unavailable");
-        return res.text();
-      })
+    const feedUrl = encodeURIComponent(`${publicationUrl}/feed?t=${Date.now()}`);
+    const relays = [
+      `https://api.codetabs.com/v1/proxy?quest=${feedUrl}`,
+      `https://api.allorigins.win/raw?url=${feedUrl}`,
+      `https://corsproxy.io/?url=${feedUrl}`,
+    ];
+    const tryRelay = async (): Promise<string> => {
+      for (const relay of relays) {
+        try {
+          const res = await fetch(relay, { cache: "no-store" });
+          if (!res.ok) continue;
+          const body = await res.text();
+          if (body.includes("<item")) return body;
+        } catch {
+          /* try next relay */
+        }
+      }
+      throw new Error("feed unavailable");
+    };
+    tryRelay()
       .then((xml) => {
         if (cancelled) return;
         const doc = new DOMParser().parseFromString(xml, "text/xml");
