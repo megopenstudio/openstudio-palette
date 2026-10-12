@@ -116,6 +116,62 @@ const fallbackArticles: Article[] = [
     image: friction.url,
   },
 ];
+
+function useSubstackArticles(): Article[] {
+  const [articles, setArticles] = useState<Article[]>(fallbackArticles);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`${publicationUrl}/feed`)
+      .then((res) => {
+        if (!res.ok) throw new Error("feed unavailable");
+        return res.text();
+      })
+      .then((xml) => {
+        if (cancelled) return;
+        const doc = new DOMParser().parseFromString(xml, "text/xml");
+        const items = Array.from(doc.querySelectorAll("item")).slice(0, 3);
+        if (items.length === 0) return;
+        const parsed = items.map((item, i) => {
+          const text = (tag: string) => item.querySelector(tag)?.textContent?.trim() ?? "";
+          const pubDate = text("pubDate");
+          const parsedDate = pubDate ? new Date(pubDate) : null;
+          const validDate = parsedDate && !Number.isNaN(parsedDate.getTime());
+          const rawDescription = text("description");
+          const excerptText = rawDescription
+            ? new DOMParser()
+                .parseFromString(rawDescription, "text/html")
+                .body.textContent?.trim() ?? ""
+            : "";
+          const enclosure = item.querySelector("enclosure")?.getAttribute("url");
+          return {
+            title: text("title") || fallbackArticles[i]?.title || "",
+            excerpt: excerptText || fallbackArticles[i]?.excerpt || "",
+            date: validDate
+              ? parsedDate.toLocaleDateString("en-IE", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })
+              : (fallbackArticles[i]?.date ?? ""),
+            dateTime: validDate
+              ? parsedDate.toISOString().slice(0, 10)
+              : (fallbackArticles[i]?.dateTime ?? ""),
+            url: text("link") || fallbackArticles[i]?.url || publicationUrl,
+            image: enclosure || fallbackArticles[i]?.image || "",
+          };
+        });
+        setArticles(parsed);
+      })
+      .catch(() => {
+        /* keep the curated fallback articles */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  return articles;
+}
+
 const approach = [
   {
     image: horizons.url,
