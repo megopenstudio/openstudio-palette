@@ -80,7 +80,15 @@ const portfolio = [
   { title: "BioSense prototype", type: "Prototyping & testing", image: biosensePrototype.url },
 ];
 const publicationUrl = "https://promptsforhumans.substack.com";
-const articles = [
+type Article = {
+  title: string;
+  excerpt: string;
+  date: string;
+  dateTime: string;
+  url: string;
+  image: string;
+};
+const fallbackArticles: Article[] = [
   {
     title: "I don’t collaborate with my toaster—do you?",
     excerpt:
