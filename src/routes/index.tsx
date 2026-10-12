@@ -80,7 +80,15 @@ const portfolio = [
   { title: "BioSense prototype", type: "Prototyping & testing", image: biosensePrototype.url },
 ];
 const publicationUrl = "https://promptsforhumans.substack.com";
-const articles = [
+type Article = {
+  title: string;
+  excerpt: string;
+  date: string;
+  dateTime: string;
+  url: string;
+  image: string;
+};
+const fallbackArticles: Article[] = [
   {
     title: "I don’t collaborate with my toaster—do you?",
     excerpt:
@@ -108,6 +116,62 @@ const articles = [
     image: friction.url,
   },
 ];
+
+function useSubstackArticles(): Article[] {
+  const [articles, setArticles] = useState<Article[]>(fallbackArticles);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(`https://api.allorigins.win/raw?url=${encodeURIComponent(`${publicationUrl}/feed`)}`)
+      .then((res) => {
+        if (!res.ok) throw new Error("feed unavailable");
+        return res.text();
+      })
+      .then((xml) => {
+        if (cancelled) return;
+        const doc = new DOMParser().parseFromString(xml, "text/xml");
+        const items = Array.from(doc.querySelectorAll("item")).slice(0, 3);
+        if (items.length === 0) return;
+        const parsed = items.map((item, i) => {
+          const text = (tag: string) => item.querySelector(tag)?.textContent?.trim() ?? "";
+          const pubDate = text("pubDate");
+          const parsedDate = pubDate ? new Date(pubDate) : null;
+          const validDate = parsedDate && !Number.isNaN(parsedDate.getTime());
+          const rawDescription = text("description");
+          const excerptText = rawDescription
+            ? new DOMParser()
+                .parseFromString(rawDescription, "text/html")
+                .body.textContent?.trim() ?? ""
+            : "";
+          const enclosure = item.querySelector("enclosure")?.getAttribute("url");
+          return {
+            title: text("title") || fallbackArticles[i]?.title || "",
+            excerpt: excerptText || fallbackArticles[i]?.excerpt || "",
+            date: validDate
+              ? parsedDate.toLocaleDateString("en-IE", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })
+              : (fallbackArticles[i]?.date ?? ""),
+            dateTime: validDate
+              ? parsedDate.toISOString().slice(0, 10)
+              : (fallbackArticles[i]?.dateTime ?? ""),
+            url: text("link") || fallbackArticles[i]?.url || publicationUrl,
+            image: enclosure || fallbackArticles[i]?.image || "",
+          };
+        });
+        setArticles(parsed);
+      })
+      .catch(() => {
+        /* keep the curated fallback articles */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  return articles;
+}
+
 const approach = [
   {
     image: horizons.url,
@@ -195,6 +259,7 @@ function Index() {
   const [filter, setFilter] = useState("All experience");
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState<(typeof portfolio)[number] | null>(null);
+  const articles = useSubstackArticles();
   const filtered = projects.filter((p) => filter === "All experience" || p.category === filter);
   const visible = expanded ? filtered : filtered.slice(0, 5);
   return (
