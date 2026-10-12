@@ -259,6 +259,7 @@ function Index() {
   const [filter, setFilter] = useState("All experience");
   const [expanded, setExpanded] = useState(false);
   const [selected, setSelected] = useState<(typeof portfolio)[number] | null>(null);
+  const articles = useSubstackArticles();
   const filtered = projects.filter((p) => filter === "All experience" || p.category === filter);
   const visible = expanded ? filtered : filtered.slice(0, 5);
   return (
